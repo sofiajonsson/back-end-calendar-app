@@ -25,6 +25,8 @@ development:
   <<: *default
   database: calendar-app_development
 
+  # key: b685bba66a7fd7328edc28a29172ef1c07341a9e
+
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is

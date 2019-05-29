@@ -31,5 +31,10 @@ module CalendarApp
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    config.action_dispatch.default_headers = {
+    'Access-Control-Allow-Origin' => 'http://http://localhost:3000/users',
+    'Access-Control-Request-Method' => %w{GET POST OPTIONS}.join(",")
+  }
   end
 end

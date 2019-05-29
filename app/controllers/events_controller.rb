@@ -24,11 +24,10 @@ class EventsController < ApplicationController
 			@event.destroy
 	end
 
-
 	private
 
 	def event_params
-		params.require(:event).permit!
+		params.require(:event).permit(:user_id, :title, :description, :date)
 	end
 
 	def set_params

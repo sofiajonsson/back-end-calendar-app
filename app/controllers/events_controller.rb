@@ -1,9 +1,11 @@
 class EventsController < ApplicationController
-	before_action :set_params, only: [:update, :destroy, :index]
+	before_action :set_params, only: [:update, :destroy]
 	def index
 		@events = Event.all
+		puts @events
 		render json: @events
 	end
+
 
 	def create
 		@event = Event.create(event_params)

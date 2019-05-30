@@ -1,4 +1,8 @@
 class User < ApplicationRecord
-	has_many :events
 	has_secure_password
+	validates :name, uniqueness: true
+	validates :email, uniqueness: true
+
+	has_many :events
+
 end

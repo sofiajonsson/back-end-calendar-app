@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
 	before_action :authorized
-	  skip_before_action :authorized, only: [:create, :index]
+	  skip_before_action :authorized, only: [:create]
 
 	  def encode_token(payload)
 	    # payload => { beef: 'steak' }
@@ -11,7 +11,7 @@ class ApplicationController < ActionController::API
 	  def auth_header
 	    # { Authorization: 'Bearer <token>' }
 	    request.headers['Authorization']
-	  end
+	  end 
 
 	  def decoded_token
 	    if auth_header

@@ -11,5 +11,3 @@
 - Open `http://localhost:3000/` in your browser
 - Next, navigate over to `front-end-calendar-app`
 - Run `bundle install` followed by `npm start` and agree to running on another port
-
-![alt text](./lib/art/calendar_pic.png)

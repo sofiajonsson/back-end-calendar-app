@@ -13,3 +13,7 @@ uu2= User.create(name:"Agetha", email: "agetha@me.com", password: "friend")
 uu3= User.create(name:"Jermaine", email: "jermaine@me.com", password: "friend")
 uu4= User.create(name:"Jack", email: "jack@me.com", password: "friend")
 puts " Users seeded..."
+
+Event.destroy_all
+puts "Seeding event .. "
+ee1 = Event.create(user_id: 4, title: "Go to Lunch", description: "Walk to Pike Place", date: 15)
